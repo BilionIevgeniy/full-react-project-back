@@ -11,13 +11,13 @@ import { TranslationsModule } from './translations/translations.module';
 			isGlobal: true,
 		}),
 		CacheModule.register({
-			// Настройки кэша:
-			// ttl - время жизни кэша в секундах.
-			// Например, 3600 секунд = 1 час. Через час данные обновятся из Google Таблицы.
-			ttl: 3600, // Кэшировать на 1 час
-			max: 100, // Максимальное количество элементов в кэше (опционально)
-			isGlobal: true, // Сделать CacheModule глобально доступным
-			// Если ты захочешь использовать Redis или другой внешний кэш, это будет выглядеть так:
+			// Cache settings:
+			// ttl - cache lifetime in seconds.
+			// For example, 3600 seconds = 1 hour. After an hour, the data will be updated from the Google Sheet.
+			ttl: 3600, // Cache for 1 hour
+			// max: 100, // Maximum number of items in the cache (optional)
+			isGlobal: true, // Make CacheModule globally available
+			// If you want to use Redis or another external cache, it would look like this:
 			// store: redisStore,
 			// host: 'localhost',
 			// port: 6379,
